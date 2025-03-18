@@ -1,5 +1,40 @@
-git remote add origin <repository-url>
-git push -u origin main
+# Initialize a new Git repository
 git init
-git add .
-git commit -m "Initial commit from v0.dev"# 1
+
+# Create a .gitignore file for Next.js projects
+cat > .gitignore << EOL
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+EOL
