@@ -1,40 +1,8 @@
-# Initialize a new Git repository
-git init
+# Add the remote repository
+git remote add origin https://github.com/yourusername/your-repo-name.git
 
-# Create a .gitignore file for Next.js projects
-cat > .gitignore << EOL
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Verify the remote was added
+git remote -v
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# local env files
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-EOL
+# Push your code to the main branch
+git push -u origin main
